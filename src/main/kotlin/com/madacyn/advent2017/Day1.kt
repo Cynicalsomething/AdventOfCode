@@ -1,6 +1,7 @@
 package com.madacyn.advent2017
 
 import com.madacyn.asDigit
+import com.madacyn.getInput
 
 class Day1(private val input: String) {
 
@@ -22,7 +23,7 @@ class Day1(private val input: String) {
 }
 
 fun main() {
-    val day = Day1("12131415")
+    val day = Day1(getInput("2017_day1_input"))
     println(day.puzzle1())
     println(day.puzzle2())
 }
