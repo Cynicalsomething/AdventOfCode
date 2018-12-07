@@ -19,8 +19,9 @@ class Day5(private val input: String) {
     private fun removeReactions(polymer: String): String =
         polymer.fold(mutableListOf<Char>()) { reacted, char ->
             when {
-                isSameLetterDifferentCase(reacted.lastOrNull(), char) -> reacted.dropLast(1).toMutableList()
+                isSameLetterDifferentCase(reacted.lastOrNull(), char) -> reacted.dropLast(1).toMutableList() // If same letter as last char added, remove it
                 else -> {
+                    // Add this char to the final polymer
                     reacted.add(char)
                     reacted
                 }
